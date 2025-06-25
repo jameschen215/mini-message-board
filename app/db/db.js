@@ -14,3 +14,7 @@ const messages = [
 export function getAllMessages() {
 	return messages.slice();
 }
+
+export function addNewMessageToMessages(newValue) {
+	messages.push(newValue);
+}

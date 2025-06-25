@@ -10,10 +10,16 @@
 
 		<ul>
 			<% if (messages.length > 0) { %> <% messages.map(msg => { %>
-			<li><%= msg.text %></li>
+			<li>
+				<span><%= msg.text %></span>
+				<span><%= msg.timeAgo %></span>
+				<a href="/messages/<%= msg.id %>">more</a>
+			</li>
 			<% })%> <% } else { %>
-			<p>No message</p>
+			<p>No message.</p>
 			<% } %>
 		</ul>
+
+		<a href="/new">Create a new message</a>
 	</body>
 </html>
